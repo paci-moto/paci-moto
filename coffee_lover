@@ -1,0 +1,8 @@
+coffees = input()
+list_of_coffees = [coffees]
+num_of_commands = int(input())
+
+for current_number in range(num_of_commands):
+    current_command = input()
+    if current_command == f"Include {list[input()]}":
+        print(current_command)
