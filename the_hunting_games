@@ -1,0 +1,26 @@
+days_number = int(input())
+player_count = int(input())
+group_energy = float(input())
+
+water = float(input())
+food = float(input())
+current_group_water = water * player_count * days_number
+current_group_food = food * player_count * days_number
+
+for current_day in range(1, days_number + 1):
+
+    energy_lost = float(input())
+    group_energy -= energy_lost
+
+    if current_day % 2 == 0:
+        group_energy += group_energy * 0.05
+        current_group_water -= current_group_water * 0.3
+    if current_day % 3 == 0:
+        current_group_food -= current_group_food / player_count
+        group_energy += group_energy * 0.1
+    if group_energy < 0:
+        break
+if group_energy > 0:
+    print(f'You are ready for the quest. You will be left with - {group_energy:.2f} energy!')
+else:
+    print(f'You will run out of energy. You will be left with {current_group_food:.2f} food and {current_group_water:.2f} water.')
