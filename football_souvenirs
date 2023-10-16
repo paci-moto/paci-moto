@@ -1,0 +1,52 @@
+team = input()
+souvenir = input()
+souvenir_sum = int(input())
+price = 0
+if team == "Argentina":
+    if souvenir == 'flags':
+        price = 3.25 * souvenir_sum
+    elif souvenir == 'caps':
+        price = 7.20 * souvenir_sum
+    elif souvenir == 'posters':
+        price = 5.10 * souvenir_sum
+    elif souvenir == 'stickers':
+        price = 1.25 * souvenir_sum
+elif team == "Brazil":
+    if souvenir == 'flags':
+        price = 4.20 * souvenir_sum
+    elif souvenir == 'caps':
+        price = 8.50 * souvenir_sum
+    elif souvenir == 'posters':
+        price = 5.35 * souvenir_sum
+    elif souvenir == 'stickers':
+        price = 1.2 * souvenir_sum
+elif team == "Croatia":
+    if souvenir == 'flags':
+        price = 2.75 * souvenir_sum
+    elif souvenir == 'caps':
+        price = 6.90 * souvenir_sum
+    elif souvenir == 'posters':
+        price = 4.95 * souvenir_sum
+    elif souvenir == 'stickers':
+        price = 1.10 * souvenir_sum
+elif team == "Denmark":
+    if souvenir == 'flags':
+        price = 3.10 * souvenir_sum
+    elif souvenir == 'caps':
+        price = 6.50 * souvenir_sum
+    elif souvenir == 'posters':
+        price = 4.80 * souvenir_sum
+    elif souvenir == 'stickers':
+        price = 0.90 * souvenir_sum
+
+total_payed = price * souvenir_sum
+
+if team == "Argentina" or team == "Brazil" or team == "Croatia" or team == "Denmark":
+    if souvenir != "flags" or souvenir != "caps" or souvenir != "posters" or souvenir != "stickers":
+        print(f'Pepi bought {souvenir_sum} {souvenir} of {team} for {total_payed:.2f} lv.')
+    else:
+        print('Invalid stock!')
+elif team != "Argentina" or team != "Brazil" or team != "Croatia" or team != "Denmark":
+    print('Invalid country!')
+else:
+    print('Invalid stock!')
